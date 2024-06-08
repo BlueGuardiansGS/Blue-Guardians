@@ -1,0 +1,477 @@
+/* ================================================================ */
+/* TEXTURA PÁGINA / IMAGENS FUNDO */
+/* ================================================================ */
+.page_texture{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url(../../base/img/texture/gradiente.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  mix-blend-mode: soft-light;
+  z-index: 0 !important;
+  pointer-events: none;
+}
+.fundo_vinheta{
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6) !important;
+  backdrop-filter: blur(20px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+
+/* ================================================================ */
+/* SESSÕES EQUIPE */
+/* ================================================================ */
+.equipe_contato{
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    z-index: 10;
+    transition: 0.3s;
+    margin-top: 15vh;
+    margin-bottom: 5vh;
+}
+.ani_entra{
+  opacity: 1;
+  z-index: 10;
+  -webkit-animation: slide-in-blurred-bottom 0.8s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.2s both;
+  animation: slide-in-blurred-bottom 0.8s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.2s both;
+}
+@-webkit-keyframes slide-in-blurred-bottom {
+  0% {
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-bottom {
+  0% {
+    -webkit-filter: blur(40px);
+            filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.centraliza_equipe_contato{
+    border-radius: 25px;
+    width: 90%;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 55px;
+}
+.centraliza_equipe_contato::-webkit-scrollbar {
+  width: 7px;               /* width of the entire scrollbar */
+}
+.centraliza_equipe_contato::-webkit-scrollbar-track {
+  background: transparent;        /* color of the tracking area */
+  margin: 25px;
+  box-sizing: border-box;
+}
+.centraliza_equipe_contato::-webkit-scrollbar-thumb {
+  background-color: #ffffffa6;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+.centraliza_equipe_contato::-webkit-scrollbar-thumb:hover {
+  background-color: #fff;
+}
+
+
+
+/* ================================================================ */
+/* EQUIPE */
+/* ================================================================ */
+.equipe{
+    width: 40%;
+    min-height: 100%;
+    padding: 38px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3vh;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 25px;
+}
+.equipe_conteudo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.equipe_img{
+    width: 205px;
+    height: 185px;
+    background: url(../img/leo.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 15px;
+}
+.equipe_img2{
+    width: 205px;
+    height: 185px;
+    background: url(../img/mi.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 15px;
+}
+.equipe_img3{
+    width: 205px;
+    height: 185px;
+    background: url(../img/raul.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    border-radius: 15px;
+}
+.equipe_textos{
+    width: 72%;
+}
+.equipe_nome{
+    font-family: Gilroy-Heavy;
+    font-style: normal;
+    font-weight: Unhandled font weight;
+    font-size: clamp(1.5rem, 1.3571rem + 0.7143vw, 2.5rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin: 0;
+     
+    color: #ffffff;
+}
+.equipe_rm{
+    font-family: Gilroy-SemiBold;
+    font-style: normal;
+    font-weight: Unhandled font weight;
+    font-size: clamp(0.75rem, 0.6786rem + 0.3571vw, 1.25rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-top: 0.7em;
+     
+    color: rgba(255, 255, 255, 0.6000000238418579);     
+}
+.redes{
+    display: flex;
+    gap: 10px;
+}
+.rede{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 63, 0.4);
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+.rede:hover{
+    background: rgba(255, 255, 255);
+    animation: rede 0.3s both;
+}
+@keyframes rede {
+    0%{
+      transform: scale(1);
+    }
+    50%{
+      transform: scale(0.9);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }
+.path{
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+    fill-opacity: 0.8;
+    transition: 0.2s;
+}
+.rede:hover > .path{
+    fill: #0532FF !important;
+}
+
+
+
+/* ================================================================ */
+/* CONTATO */
+/* ================================================================ */
+.contato{
+    width: 60%;
+    min-height: 100%;
+    padding: 38px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 25px;
+}
+.titu_contato{
+    font-family: Gilroy-Heavy;
+    font-style: normal;
+    font-weight: Unhandled font weight;
+    font-size: clamp(2.25rem, 2.1429rem + 0.5357vw, 3rem);
+    line-height: 34px;
+    text-align: left;
+    margin-bottom: 3.5%;
+    margin-top: 4%;
+     
+    color: #ffffff;    
+}
+.contato_form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 3vh;
+}
+.titu_campo{
+    font-family: Gilroy-Black;
+    font-style: normal;
+    font-weight: Unhandled font weight;
+    font-size: clamp(1.25rem, 1.1429rem + 0.5357vw, 2rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-bottom: 0.4em;
+    margin-left: 0.4em;
+     
+    color: #ffffff;    
+}
+.titu_campo2{
+    font-family: Gilroy-Black;
+    font-style: normal;
+    font-weight: Unhandled font weight;
+    font-size: clamp(1.25rem, 1.1429rem + 0.5357vw, 2rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 0.4em;
+    margin-left: 0.4em;
+     
+    color: #ffffff;    
+}
+.label_campo{
+    width: 100%;
+}
+.nome_email{
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+}
+.campo{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 8.5vh;
+    padding-left: 2.5vh;
+    padding-right: 2.5vh;
+    background: rgba(255, 255, 255, 0.15000000596046448);
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 25px;
+      
+
+    /* texto */
+    font-family: Gilroy-Bold;
+    font-style: normal;
+    font-weight: Unhandled font weight;
+    font-size: clamp(0.9375rem, 0.8571rem + 0.4018vw, 1.5rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-align: left;
+     
+    color: #ffffff;
+}
+.campo:focus{
+    background: rgba(43, 102, 255, 0.10000000149011612);
+    border: 2px solid #2b66ff;
+    outline: none;
+}
+.campo:required:valid{
+    background: rgba(43, 102, 255, 0.10000000149011612);
+    border: 2px solid #2b66ff;
+}
+.campo2{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 20vh;
+    padding: 2.5vh;
+    background: rgba(255, 255, 255, 0.15000000596046448);
+    border: 2px solid rgba(255, 255, 255, 0);
+    border-radius: 25px;
+      
+
+    /* texto */
+    font-family: Gilroy-Bold;
+    font-style: normal;
+    font-weight: Unhandled font weight;
+    font-size: clamp(0.9375rem, 0.8571rem + 0.4018vw, 1.5rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-align: left;
+     
+    color: #ffffff;
+}
+.campo2:focus{
+    background: rgba(43, 102, 255, 0.10000000149011612);
+    border: 2px solid #2b66ff;
+    outline: none;
+}
+.campo2:required:valid{
+    background: rgba(43, 102, 255, 0.10000000149011612);
+    border: 2px solid #2b66ff;
+}
+.campo2::-webkit-scrollbar {
+    width: 7px;               /* width of the entire scrollbar */
+  }
+  .campo2::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+    margin: 25px;
+    box-sizing: border-box;
+  }
+  .campo2::-webkit-scrollbar-thumb {
+    background-color: #ffffffa6;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }
+  .campo2::-webkit-scrollbar-thumb:hover {
+    background-color: #fff;
+  }
+  
+.enviar{
+    width: 100%;
+    height: auto;
+    background: #0532ff99;
+    border-radius: 25px;
+    padding: 1.5em;
+    box-sizing: border-box;
+    border: none;
+
+    font-family: Gilroy-Black;
+    font-style: normal;
+    font-weight: Unhandled font weight;
+    font-size: clamp(1.25rem, 1.1429rem + 0.5357vw, 2rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-align: center;
+     
+    color: #ffffff;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.enviar:hover{
+    color: #0532ff;
+    background-color: #fff;
+}
+.enviar:active{
+    transform: scale(0.98);
+}
+
+
+
+
+
+/* ================================================================ */
+/* MOBILE */
+/* ================================================================ */
+@media (max-width: 999px){
+    .centraliza_equipe_contato {
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .titu_contato{
+        padding-left: 0.2em;
+    }
+    .contato{
+        width: 100%;
+        padding: 30px;
+    }
+    .equipe{
+        width: 100%;
+        padding: 30px;
+    }
+    .equipe_img{
+        width: 88px;
+        height: 84px;
+    }
+    .equipe_img2{
+        width: 88px;
+        height: 84px;
+    }
+    .equipe_img3{
+        width: 88px;
+        height: 84px;
+    }
+    .rede{
+        padding: 0px;
+        background-color: transparent;
+    }
+    .path{
+        width: 21px;
+        height: 21px;
+    }
+    .equipe_textos{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .equipe_conteudo{
+        gap: 10px;
+    }
+    .equipe_rm{
+        margin-bottom: 0px;
+    }
+}
+
+@media (max-width: 555px){
+    .campo{
+        border-radius: 15px;
+    }
+    .campo2{
+        border-radius: 15px;
+    }
+    .enviar{
+        border-radius: 15px;
+    }
+    .contato{
+        width: 100%;
+        padding: 22px;
+    }
+    .equipe{
+        width: 100%;
+        padding: 22px;
+    }
+}

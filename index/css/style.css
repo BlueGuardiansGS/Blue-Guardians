@@ -1,0 +1,431 @@
+html, body{
+    background-color: #E7F1FF;
+}
+
+  /* -------------MUDAR O STYLE DO SCROLLBAR---------------- */
+  
+  body::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+    position: absolute;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #E7F1FF !important;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #0532FF70 !important;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: #0532FF !important;
+  }
+
+
+  .nav_menu_btn{
+    background-color: #0532FF !important;
+    color: #fff !important;
+  }
+  .menu_icone{
+    fill: #fff !important;
+  }
+
+  @media (max-width:999px) {
+    .menu_icone{
+      fill: #0532FF !important;
+    }
+  }
+  footer{
+    background: linear-gradient(
+      0deg,
+      #032CA6 0%,
+      #032CA666 100%
+    ) !important;
+  }
+  .tudo_rodape_baixo{
+    border-color: rgba(255, 255, 255, 0.20) !important;
+  }
+
+  .menu_links{
+    background: rgba(0, 0, 0, 0.25) !important;
+  }
+
+/* ================================================================ */
+/* SESSÕES SOBRE */
+/* ================================================================ */
+.inicio_sobre{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+  transition: 0.8s 1s ease;
+  margin-top: -3vh;
+}
+.ani_entra{
+  opacity: 1;
+  z-index: 10;
+  -webkit-filter: blur(0);
+    filter: blur(0);
+  opacity: 1;
+}
+.inicio_sub_titulo{
+    font-family: Gilroy-SemiBold;
+    font-style: normal;
+    font-weight: Unhandled font weight;
+    font-size: clamp(1.125rem, 1.0357rem + 0.4464vw, 1.75rem);
+    line-height: 20px;
+    letter-spacing: -0.04em;
+    text-align: center;
+    color: #010326;
+    margin-top: 0;
+  }
+  .inicio_titulo{
+    font-family: Passion One;
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(3.625rem, 3rem + 3.125vw, 8rem);
+    line-height: 0.76;
+    text-align: center;
+    color: #0532FF;
+    margin: 0;
+  }
+  .inicio_btn{
+    background: #0532FF25;
+    border: 2px solid #0533ff00;
+    border-radius: 25px;
+    backdrop-filter: blur(18px);
+    padding: 1em 2em;
+    box-sizing: border-box;
+  
+    font-family: Gilroy-Bold;
+    font-style: normal;
+    font-weight: Unhandled font weight;
+    font-size: clamp(1.25rem, 1.2143rem + 0.1786vw, 1.5rem);
+    line-height: auto;
+    letter-spacing: -0.04em;
+    text-align: left;
+    color: #0532FF;
+    text-decoration: none;
+  
+    margin-top: 2em;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .inicio_btn:hover{
+    transform: scale(0.95);
+    background-color: #0532FF;
+    color: #fff;
+    border: 2px solid #0533ff;
+  }
+
+
+
+/* ================================================================ */
+/* SESSÕES INICIO MOBILE */
+/* ================================================================ */
+.inicio_sub_titulo_mobile{
+    display: none;
+    font-family: Gilroy-SemiBold;
+    font-style: normal;
+    font-weight: Unhandled font weight;
+    font-size: clamp(1.125rem, 1.0357rem + 0.4464vw, 1.75rem);
+    line-height: 20px;
+    letter-spacing: -0.04em;
+    text-align: center;
+    color: #0532FF;
+    margin-top: 0;
+  }
+  .inicio_titulo_mobile{
+    width: 80%;
+    display: none;
+    font-family: Passion One;
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(3rem, 2.2857rem + 3.5714vw, 8rem);
+    line-height: 0.76;
+    text-align: center;
+    color: #0532FF;
+    margin: 0;
+  }
+  @media (max-width:699px) {
+    .inicio_sub_titulo_mobile{
+      display: block;
+    }
+    .inicio_titulo_mobile{
+      display: block;
+    }
+    .inicio_sub_titulo{
+      display: none;
+    }
+    .inicio_titulo{
+      display: none;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================================================ */
+/* VIDEO PITCH */
+/* ================================================================ */
+.video_sobre{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+    transition: 0.8s 1s ease;
+    margin-top: 5vh;
+    margin-bottom: 15vh;
+}
+.video_pitch_sobre{
+    width: 80%;
+    height: 80vh;
+    background-color: #0532FF;
+    border-radius: 40px;
+}
+.video_sub_titulo{
+    width: 60%;
+    font-family: Gilroy-Bold;
+    font-style: normal;
+    font-weight: Unhandled font weight;
+    font-size: clamp(1.125rem, 1.0357rem + 0.4464vw, 1.75rem);
+    line-height: 20px;
+    letter-spacing: -0.04em;
+    text-align: center;
+    color: #010326;
+    opacity: 0.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================================================================ */
+/* SESSÃO */
+/* ================================================================ */
+.sessao_sobre1{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 10;
+    margin-top: -5vh;
+}
+.sessao_sobre{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+}
+.sessao_sobre_dentro{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.sessao_sobre_dentro2{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+}
+.sessao_sobre_img{
+  width: 50%;
+  height: 80%;
+  background: url("../img/sessao1.png");
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 40px;
+}
+.sessao_sobre_img2{
+  width: 50%;
+  height: 80%;
+  background: url("../img/sessao2.png");
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 40px;
+}
+.sessao_sobre_img3{
+  width: 50%;
+  height: 80%;
+  background: url("../img/sessao3.png");
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 40px;
+}
+.sessao_sobre_img4{
+  width: 50%;
+  height: 80%;
+  background: url("../img/sessao4.png");
+  background-position: 50% 50%;
+  background-size: cover;
+  border-radius: 40px;
+}
+.sessao_sobre_txt{
+  width: 50%;
+  margin-left: 6%;
+  margin-right: 6%;
+}
+.sessao_sobre_txt2{
+  width: 50%;
+  margin-left: 3%;
+  margin-right: 6%;
+}
+.sessao_titulo{
+  font-family: Gilroy-Heavy;
+  font-style: normal;
+  font-weight: Unhandled font weight;
+  font-size: clamp(2rem, 1.6429rem + 1.7857vw, 4.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  text-align: left;
+   
+  color: #00003f;
+  margin: 0;
+}
+.sessao_txt{
+  font-family: Gilroy-SemiBold;
+  font-style: normal;
+  font-weight: Unhandled font weight;
+  font-size: clamp(1.125rem, 1.0357rem + 0.4464vw, 1.75rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  text-align: left;
+  margin-top: 3vh;
+  margin-bottom: 5vh;
+   
+  color: rgba(0, 0, 63, 0.6000000238418579);  
+}
+.sessao_btn{
+  background: rgba(5, 50, 255, 0.15000000596046448);
+  border-radius: 15px;  
+  width: 50%;
+
+  font-family: Gilroy-Black;
+  font-style: normal;
+  font-weight: Unhandled font weight;
+  font-size: clamp(1.125rem, 1.0357rem + 0.4464vw, 1.75rem);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 3em;
+  box-sizing: border-box;
+   
+  color: #0532ff;
+  border: 2px solid #0533ff00;
+  transition: 0.3s;
+}
+.sessao_btn:hover{
+  background: rgba(5, 51, 255, 0.075);
+  transform: scale(0.95);
+  border-radius: 50px;
+  border: 2px solid #0532ff;
+}
+
+
+
+/* ================================================================ */
+/* SESSÃO MOBILE */
+/* ================================================================ */
+@media (max-width:699px) {
+  .sessao_sobre1{
+    height: 70vh;
+    margin-top: -10vh;
+  }
+  .sessao_sobre{
+    height: 70vh;
+  }
+  .sessao_sobre_dentro{
+    flex-direction: column;
+    height: 80%;
+    width: 85%;
+  }
+  .sessao_sobre_dentro2{
+    flex-direction: column;
+    height: 80%;
+    width: 85%;
+  }
+  .sessao_sobre_img{
+    border-radius: 25px;
+    width: 100%;
+  }
+  .sessao_sobre_img2{
+    border-radius: 25px;
+    width: 100%;
+  }
+  .sessao_sobre_img3{
+    border-radius: 25px;
+    width: 100%;
+  }
+  .sessao_sobre_img4{
+    border-radius: 25px;
+    width: 100%;
+  }
+  .sessao_sobre_txt{
+    width: 90%;
+    margin: 0;
+  }
+  .sessao_sobre_txt2{
+    width: 90%;
+    margin: 0;
+  }
+  .sessao_titulo{
+    margin-top: 3vh;
+  }
+  .sessao_txt{
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+  }
+  .sessao_btn{
+    width: 100%;
+  }
+  .video_sobre{
+    height: 40vh;
+  }
+  .video_pitch_sobre{
+    width: 85%;
+  }
+}
