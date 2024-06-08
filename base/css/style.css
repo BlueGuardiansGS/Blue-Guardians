@@ -1,0 +1,605 @@
+/* ================================================================ */
+/* HTML BODY / MAIN */
+/* ================================================================ */
+html, body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+body{
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+  /* -------------MUDAR O STYLE DO SCROLLBAR---------------- */
+  
+  body::-webkit-scrollbar {
+    width: 10px;               /* width of the entire scrollbar */
+    position: absolute;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: #00003F;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #ffffff70;    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: #fff;
+  }
+
+  /* -------------LIBRAS---------------- */
+  div[vw].enabled{
+    top: auto !important;
+    bottom: 1vh !important;
+    transform: translateX(calc(0% - 1vh)) !important;
+  }
+  
+
+
+
+
+/* ================================================================ */
+/* FONTES */
+/* ================================================================ */
+
+@font-face {
+  font-family: Passion One;
+  src: url(../../fonts/passion-one/PassionOne-Bold.otf)
+}
+
+@font-face {
+  font-family: Gilroy-Bold;
+  src: url(../../fonts/gilroy/Gilroy-Bold.ttf)
+}
+@font-face {
+  font-family: Gilroy-Black;
+  src: url(../../fonts/gilroy/Gilroy-Black.ttf)
+}
+@font-face {
+  font-family: Gilroy-Heavy;
+  src: url(../../fonts/gilroy/Gilroy-Heavy.ttf)
+}
+@font-face {
+  font-family: Gilroy-HeavyItalic;
+  src: url(../../fonts/gilroy/Gilroy-HeavyItalic.ttf)
+}
+@font-face {
+  font-family: Gilroy-SemiBold;
+  src: url(../../fonts/gilroy/Gilroy-SemiBold.ttf)
+}
+
+
+/* ================================================================ */
+/* TEXTURA PÁGINA / IMAGENS FUNDO */
+/* ================================================================ */
+.page_texture{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: url(../../base/img/texture/gradiente.png);
+  background-size: cover;
+  background-position: 50% 50%;
+  mix-blend-mode: soft-light;
+  z-index: 1000;
+  pointer-events: none;
+}
+.fundo_vinheta{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(
+    closest-side,
+    #0000002f 18.99999976158142%,
+    #00000066 100%
+  );
+  transition: 0.5s;
+}
+.claro{
+  opacity: 0.5;
+}
+.escuro{
+  opacity: 1;
+}
+.fundo_inicio{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -2;
+  pointer-events: none;
+}
+
+
+
+
+/* ================================================================ */
+/* MENU DE NAVEGAÇÃO */
+/* ================================================================ */
+nav{
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: fixed;
+  top: 5%;
+  left: 0;
+  z-index: 900;
+}
+/* -------------MENU---------------- */
+.nav{
+  position: absolute;
+  width: 92%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav_menu_btn{
+  width: auto;
+  height: auto;
+  padding: 20px 22px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: #fff;
+
+  font-family: Gilroy-Bold;
+  font-style: normal;
+  font-weight: Unhandled font weight;
+  font-size: clamp(0.75rem, 0.7143rem + 0.1786vw, 1rem);
+  line-height: 11px;
+  letter-spacing: -0.04em;
+  text-align: left;
+  color: #00003F;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2vh;
+
+  cursor: pointer;
+}
+.nav_menu_btn p{
+  display: block;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+.nav_logo{
+  height: 28px;
+}
+.nav_logo_mobile{
+  height: 28px;
+  display: none;
+}
+.nav_logo_img{
+  height: 100%;
+}
+.menu_icone{
+  fill: #00003F;
+}
+.menu_icone_abrir{
+  width: 12px;
+  transition: 0.3s;
+}
+.menu_icone_fechar{
+  width: 0px !important;
+}
+
+/* ================================================================ */
+/* MENU DE NAVEGAÇÃO MOBILE */
+/* ================================================================ */
+@media (max-width:999px) {
+  .nav{
+    width: 85%;
+  }
+  .nav_menu_btn p{
+    display: none;
+  }
+  .nav_menu_btn{
+    background-color: transparent !important;
+    padding: 0.5em;
+  }
+  .menu_icone{
+    fill: #fff;
+  }
+  .nav_logo{
+    display: none;
+  }
+  .nav_logo_mobile{
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ================================================================ */
+/* MENU LINKS */
+/* ================================================================ */
+.menu_links{
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(64.85px);
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 800;
+  transition: 0.8s ease;
+}
+.fechado{
+  top: -100vh;
+  filter: blur(100px);
+}
+.menu_links_dentro{
+  width: 400px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.menu_link{
+  font-family: Passion One;
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(4rem, 3.7143rem + 1.4286vw, 6rem);
+  line-height: 0.76;
+  letter-spacing: -0.02em;
+  text-align: left;
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.2s;
+  opacity: 0.9;
+}
+.menu_link:hover{
+  color: #fff;
+  opacity: 1 !important;
+  margin-left: 20px;
+}
+.ani_menu_link:nth-child(1){
+  animation: slide-in-bck-center 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.8s both;
+}
+.ani_menu_link:nth-child(2){
+  animation: slide-in-bck-center 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 0.9s both;
+}
+.ani_menu_link:nth-child(3){
+  animation: slide-in-bck-center 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1s both;
+}
+.ani_menu_link:nth-child(4){
+  animation: slide-in-bck-center 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.1s both;
+}
+.ani_menu_link:nth-child(5){
+  animation: slide-in-bck-center 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.2s both;
+}
+.ani_menu_link:nth-child(6){
+  animation: slide-in-bck-center 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.3s both;
+}
+@keyframes slide-in-bck-center {
+  0% {
+    transform: scale(5);
+    opacity: 0;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+  }
+}
+
+/* ================================================================ */
+/* MENU LINKS MOBILE */
+/* ================================================================ */
+@media (max-width:555px) {
+  .menu_links_dentro{
+    width: 80%;
+  }
+  
+}
+
+
+
+/* ================================================================ */
+/* RODAPE */
+/* ================================================================ */
+
+
+
+/* -------------BASE---------------- */
+
+footer{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 34, 1) 0%,
+    rgba(0, 0, 63, 0.4) 100%
+  );
+  border-radius: 50px 50px 0px 0px;
+  position: relative;
+  backdrop-filter: blur(60px);
+  z-index: 700;
+}
+
+
+
+/* -------------LINKS---------------- */
+
+.rodape_links{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.links{
+  display: flex;
+}
+.sitemap{
+  display: flex;
+  flex-direction: column;
+}
+.sitemap4{
+  display: flex;
+  flex-direction: column;
+  margin-right: 3vw;
+  margin-left: 8vw;
+}
+.sitemap_titu{
+  /* Rectangle 242 (rectangle) */
+  width: 192px;
+  height: 40px;
+  margin: 0;
+  
+  font-family: Gilroy-Bold;
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(1.125rem, 1.1071rem + 0.0893vw, 1.25rem);
+  line-height: 25px;
+  text-align: left;
+  
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+.dentro_sitemap{
+  position: absolute;
+}
+
+.anchor2{
+  width: auto;
+  height: 25px;
+  position: relative;
+  margin: 0;
+
+  font-family: Gilroy-SemiBold;
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(1.125rem, 1.1071rem + 0.0893vw, 1.25rem);
+  line-height: 25px;
+  text-align: left;
+  text-decoration: none;
+   
+  color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+}
+.anchor2:hover{
+  color: rgb(255, 255, 255);
+  padding-left: 1vh;
+  font-family: Gilroy-Bold;
+}
+
+
+/* -------------RODAPE BAIXO---------------- */
+
+.tudo_rodape_baixo{
+  width: 100%;
+  height: 12vh;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.1);
+  border-width: 3px 0px 0px 0px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo_footer{
+  height: 30%;
+  opacity: 0.5;
+  margin-left: 3%;
+}
+.logo_rodape{
+  margin-left: 5%;
+  height: 25%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vh;
+}
+.logo_BlueGuardians_rodape{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo_nav{
+  height: 90%;
+}
+.logo_porto_rodape{
+  height: 85%;
+}
+.lerami{
+  font-family: Gilroy-SemiBold;
+  font-style: normal;
+  font-weight: 600;
+  font-size: clamp(0.875rem, 0.8214rem + 0.2679vw, 1.25rem);
+  line-height: auto;
+  letter-spacing: -0.04em;
+  text-align: right;
+  text-decoration: none;
+   
+  color: #ffffff;
+  display: flex;
+  align-items: flex-end;
+  opacity: 0.8;
+  margin-right: 5%;
+}
+.redes_sociais_rodape{
+  display: flex;
+  gap: 2vh;
+}
+.redes_sociais{
+  width: 5vh;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 100%;
+  transition: 0.2s;
+}
+.redes_sociais:hover{
+  transform: scale(0.9);  
+  background-color: #ffffff;
+}
+
+.rede_social{
+  width: 50%;
+  height: 50%;
+  fill: #ffffff;
+  transition: 0.2s;
+}
+.redes_sociais:hover > .rede_social{
+  fill: #0532FF;
+}
+
+
+
+
+
+
+/* ================================================================ */
+/* RODAPE - MOBILE */
+/* ================================================================ */
+.rodape_todos_links{
+  width: 90%;
+  height: 45%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 10vh;
+  margin-top: 6vh;
+}
+
+@media (max-width: 955px){
+  .links{
+    flex-direction: column;
+  }
+  .rodape_todos_links{
+    height: 60%;
+    align-items: flex-start;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+  }
+  .rodape_links{
+    width: 80%;
+    margin-left: 3%;
+    margin-top: 2vh;
+    flex-direction: column;
+  }
+  .sitemap_titu{
+    height: 35px;
+  }
+  .anchor2{
+    height: 30px;
+  }
+  .sitemap4{
+    margin-left: 0;
+    margin-top: 4vh;
+  }
+  .redes_sociais_rodape{
+    margin-top: 4vh;
+  }
+  .tudo_rodape_baixo{
+    margin-top: 3vh;
+    height: 11vh;
+  }
+  .logo_rodape{
+    height: 40%;
+    margin-left: 8%;
+  }
+  .logo_nav{
+    height: 70%;
+  }
+}
+@media (max-width: 640px){
+  footer{
+    border-radius: 25px 25px 0px 0px;
+  }
+  .logo_porto_rodape{
+    display: none;
+  }
+  .linha_divide{
+    display: none;
+  }
+  .rodape_baixo{
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70%;
+  }
+  .lerami{
+    height: auto;
+  }
+  .anchor2{
+    width: 100%;
+  }
+  .sitemap{
+    width: 50%;
+  }
+  .sitemap4{
+    width: 50%;
+  }
+  .rodape_links{
+    width: 90%;
+    margin-top: 0;
+  }
+  .logo_nav{
+    height: 50%;
+  }
+}

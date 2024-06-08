@@ -1,0 +1,9 @@
+#WACContainer.WACContainer .WACLauncher__ButtonContainer.WACLauncher__ButtonContainer--round .WACLauncher__Button:not(.WACLauncher__TourButton){
+    background: url(../../base/img/chat_bot/polvo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 55% 55%;
+}
+#WACContainer.WACContainer button.WACLauncher__Button svg{
+    opacity: 0;
+}
