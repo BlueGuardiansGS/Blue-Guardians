@@ -1,173 +1,788 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-    <!-- styles -->
-    <link rel="stylesheet" href="index/css/style.css">
-    <link rel="stylesheet" href="base/css/style.css">
-    <title>Blue Guardians - Sobre</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index/css/style.css" />
+    <link rel="stylesheet" href="base/css/style.css" />
+    <title>Coast</title>
+  </head>
+  <body>
     <main role="main">
-        <!--TEXTURA PÁGINA-->
-        <div class="page_texture"></div>
+      <!--TEXTURA PÁGINA-->
+      <div class="page_texture"></div>
+      <!--VINHETA-->
+      <div class="fundo_vinheta claro"></div>
+      <!--VIDEO DE FUNDO-->
+      <video
+        id="myVideo"
+        class="fundo_inicio"
+        controlslist="nofullscreen nodownload noremoteplayback noplaybackrate foobar"
+        disablepictureinpicture
+        disableremoteplayback
+        muted
+        playsinline
+      >
+        <source src="index/video/Video.mp4" type="video/mp4" />
+      </video>
 
-        <!-- LIBRAS -->
-        <div vw class="enabled">
-            <div vw-access-button class="active"></div>
-            <div vw-plugin-wrapper>
-              <div class="vw-plugin-top-wrapper"></div>
-            </div>
+      <!--MENU DE NAVEGAÇÃO-->
+      <nav>
+        <!--MENU-->
+        <div class="nav">
+          <a href="index.html" class="nav_logo"
+            ><img
+              src="base/img/nav/logo.png"
+              class="nav_logo_img"
+              alt="Logo Coast"
+              title="Logo Coast"
+              role="link"
+              aria-label="Ir para o começo da página"
+          /></a>
+          <a href="index.html" class="nav_logo_mobile"
+            ><img
+              src="base/img/nav/logo_mobile.png"
+              class="nav_logo_img"
+              alt="Logo Coast"
+              title="Logo Coast"
+              role="link"
+              aria-label="Ir para o começo da página"
+          /></a>
+          <a class="nav_menu_btn" role="link" aria-label="Abrir menu de links">
+            <p>Menu</p>
+            <svg
+              width="18"
+              height="13"
+              class="menu_icone"
+              viewBox="0 0 18 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect class="menu_icone_abrir" x="6" height="3" />
+              <rect y="5" width="18" height="3" />
+              <rect class="menu_icone_abrir" x="6" y="10" height="3" />
+            </svg>
+          </a>
         </div>
-        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-        <script>
-            new window.VLibras.Widget('https://vlibras.gov.br/app');
-        </script>
-
-        <!--MENU DE NAVEGAÇÃO-->
-        <header>
-            <nav>
-                <!--MENU-->
-                <div class="nav">
-                    <a href="index.html" class="nav_logo"><img src="base/img/nav/logo_azul.png" class="nav_logo_img" alt="Logo Blue Guardians" title="Logo Blue Guardians"></a>
-                    <a href="index.html" class="nav_logo_mobile"><img src="base/img/nav/logo_mobile_azul.png" class="nav_logo_img" alt="Logo Blue Guardians" title="Logo Blue Guardians"></a>
-                    <a class="nav_menu_btn" role="link" aria-label="Abrir menu de links">
-                        <p>Menu</p>
-                        <svg width="18" height="13" class="menu_icone" viewBox="0 0 18 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect class="menu_icone_abrir" x="6" height="3"/>
-                            <rect y="5" width="18" height="3"/>
-                            <rect class="menu_icone_abrir" x="6" y="10" height="3"/>
-                        </svg>                       
-                    </a>
-                </div>
-            </nav>
-        </header>
-
-        <!--LINKS MENU-->
-        <div class="menu_links fechado">
-            <div class="menu_links_dentro">
-                <a href="quiz.html" class="menu_link" aria-label="Ir para a Página de Quiz">QUIZ</a>
-                <a href="doar.html" class="menu_link" aria-label="Ir para a Página de Doações">DOAR</a>
-                <a href="index.html" class="menu_link" aria-label="Ir para a Página Principal">SOBRE</a>
-                <a href="equipe.html" class="menu_link" aria-label="Ir para a Página da Equipe">EQUIPE</a>
-                <a href="doar.html" class="menu_link" aria-label="Ir para a Página de Ao Vivo">AO VIVO</a>
-                <a href="equipe.html" class="menu_link" aria-label="Ir para a Página de Contato">CONTATO</a>
-            </div>
+        <!--NAVEGAÇÃO QUIZ-->
+        <div class="nav_quiz">
+          <a
+            class="nav_quiz_inicio ativo inicio"
+            onclick="playTo(0)"
+            role="link"
+            aria-label="Ir para a seção 'Início'"
+            >INÍCIO</a
+          >
+          <a
+            class="nav_quiz_num btn_1"
+            onclick="playTo(2)"
+            role="link"
+            aria-label="Ir para a seção 'Quiz 1'"
+            >1</a
+          >
+          <a
+            class="nav_quiz_num btn_2"
+            onclick="playTo(4)"
+            role="link"
+            aria-label="Ir para a seção 'Quiz 2'"
+            >2</a
+          >
+          <a
+            class="nav_quiz_num btn_3"
+            onclick="playTo(6)"
+            role="link"
+            aria-label="Ir para a seção 'Quiz 3'"
+            >3</a
+          >
+          <a
+            class="nav_quiz_num btn_4"
+            onclick="playTo(8)"
+            role="link"
+            aria-label="Ir para a seção 'Quiz 4'"
+            >4</a
+          >
+          <a
+            class="nav_quiz_num btn_5"
+            onclick="playTo(10)"
+            role="link"
+            aria-label="Ir para a seção 'Quiz 5'"
+            >5</a
+          >
+          <a
+            class="nav_quiz_inicio fim"
+            onclick="playTo(12)"
+            role="link"
+            aria-label="Ir para a seção 'FIM'"
+            >FIM</a
+          >
         </div>
+      </nav>
 
+      <!--LINKS MENU-->
+      <div class="menu_links fechado">
+        <div class="menu_links_dentro">
+          <a
+            href="index.html"
+            role="link"
+            aria-label="Ir para a Página de Quiz"
+            class="menu_link"
+            >QUIZ</a
+          >
+          <a
+            href="doar.html"
+            role="link"
+            aria-label="Ir para a Página de Doações"
+            class="menu_link"
+            >DOAR</a
+          >
+          <a
+            href="equipe.html"
+            role="link"
+            aria-label="Ir para a Página da Equipe"
+            class="menu_link"
+            >EQUIPE</a
+          >
+          <a
+            href="doar.html"
+            role="link"
+            aria-label="Ir para a Página de Ao Vivo"
+            class="menu_link"
+            >AO VIVO</a
+          >
+          <a
+            href="equipe.html"
+            role="link"
+            aria-label="Ir para a Página de Contato"
+            class="menu_link"
+            >CONTATO</a
+          >
+        </div>
+      </div>
+
+      <!--MENU INFERIOR-->
+      <div class="nav_inf">
+        <div class="nav_inf_centraliza">
+          <a
+            href="doar.html"
+            class="nav_inf_doacao"
+            role="link"
+            aria-label="Ir para a página de Doações"
+          >
+            <svg
+              width="17"
+              height="16"
+              viewBox="0 0 17 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13.1529 0.809242C11.4761 0.245075 9.94728 0.715075 8.80008 2.12841C7.65208 0.713409 6.12327 0.245908 4.44807 0.809242C2.33047 1.51924 1.00967 3.51174 1.00007 6.00841C0.98087 10.2867 4.93367 13.6384 8.63848 15.3484L8.80088 15.4234L8.96328 15.3484C12.6689 13.6384 16.6201 10.2867 16.6001 6.00841C16.5905 3.51174 15.2697 1.51924 13.1529 0.809242Z"
+                fill="#0532FF"
+              />
+            </svg>
+            <p class="doacao_txt">Realizar uma Doação</p>
+            <p class="doacao_txt_mobile">Doar</p>
+          </a>
+        </div>
+      </div>
+
+      <section class="TODOS_QUIZES">
         <!--INICIO-->
-        <section class="inicio_sobre ani_entra">
-            <h3 class="inicio_sub_titulo">Blue Guardians: Sobre a Empresa</h3>
-            <h1 class="inicio_titulo">Explore, Aprenda e<br>Proteja os Oceanos!</h1>
-            <h3 class="inicio_sub_titulo_mobile">Blue Guardians!</h3>
-            <h1 class="inicio_titulo_mobile">Explore, Aprenda e Proteja os Oceanos!</h1>
-            <a class="inicio_btn" href="#sessao1" aria-label="Ir para próxima sessão - Saber mais">Conhecer</a>
+        <section class="antes_quiz quiz_inicio ani_entra">
+          <h3 class="inicio_sub_titulo">
+            Mergulhe no Azul: Uma Aventura Virtual pelos Oceanos
+          </h3>
+          <h1 class="inicio_titulo">
+            Explore os oceanos<br />como nunca antes!
+          </h1>
+          <h3 class="inicio_sub_titulo_mobile">Mergulhe no Azul!</h3>
+          <h1 class="inicio_titulo_mobile">
+            Uma Aventura Virtual pelos Oceanos
+          </h1>
+          <a
+            class="inicio_btn"
+            onclick="playTo(2)"
+            role="link"
+            aria-label="Começar Quiz - Ir para sessão 'Quiz 1'"
+            >Começar a Exploração!</a
+          >
         </section>
 
-        <!--INFORMAÇÃO 1-->
-        <section class="sessao_sobre1" id="sessao1">
-            <div class="sessao_sobre_dentro">
-                <div class="sessao_sobre_img"></div>
-                <div class="sessao_sobre_txt">
-                    <h3 class="sessao_titulo">Um mergulho profundo no conhecimento</h3>
-                    <h5 class="sessao_txt">Através do nosso quiz interativo, você testará seus conhecimentos sobre a vida marinha, os diferentes ecossistemas oceânicos e os desafios que eles enfrentam.</h5>
-                    <a href="quiz.html" class="sessao_btn" aria-label="Ir para a Página de Quiz">Conhecer quiz</a>
-                </div>
-            </div>
-        </section>
-        <!--INFORMAÇÃO 2-->
-        <section class="sessao_sobre">
-            <div class="sessao_sobre_dentro2">
-                <div class="sessao_sobre_img2"></div>
-                <div class="sessao_sobre_txt2">
-                    <h3 class="sessao_titulo">Exploração imersiva</h3>
-                    <h5 class="sessao_txt">Nossos robos te levará a uma viagem pelos oceanos, revelando informações sobre a biodiversidade, os níveis de poluição e os projetos de conservação em diferentes regiões.</h5>
-                    <a href="doar.html" class="sessao_btn" aria-label="Ir para a Página de Ao Vivo">Assistir Ao-Vivo</a>
-                </div>
-            </div>
-        </section>
-        <!--INFORMAÇÃO 3-->
-        <section class="sessao_sobre">
-            <div class="sessao_sobre_dentro">
-                <div class="sessao_sobre_img3"></div>
-                <div class="sessao_sobre_txt">
-                    <h3 class="sessao_titulo">Seu guia especialista</h3>
-                    <h5 class="sessao_txt">Tenha a companhia do nosso chatbot inteligente, o Professor Polvo, pronto para responder suas perguntas, fornecer informações adicionais e tornar sua jornada ainda mais completa.</h5>
-                    <a href="quiz.html" class="sessao_btn" aria-label="Ir para a Página de Quiz">Conhecer</a>
-                </div>
-            </div>
-        </section>
-        <!--INFORMAÇÃO 4-->
-        <section class="sessao_sobre">
-            <div class="sessao_sobre_dentro2">
-                <div class="sessao_sobre_img4"></div>
-                <div class="sessao_sobre_txt2">
-                    <h3 class="sessao_titulo">Um chamado à ação</h3>
-                    <h5 class="sessao_txt">Acreditamos que cada um de nós tem um papel fundamental na proteção dos oceanos. Por isso, a Blue Guardians te convida a se juntar a essa missão!</h5>
-                    <a href="doar.html" class="sessao_btn" aria-label="Ir para a Página de Doações">Doar</a>
-                </div>
-            </div>
+        <!--QUIZ 1-->
+        <section class="antes_quiz quiz_1 ani_sai">
+          <div class="quiz">
+            <h2 class="quiz_titulo">
+              De onde vem a maior parte<br />do oxigênio que respiramos?
+            </h2>
+            <h2 class="quiz_titulo_mobile">
+              De onde vem a maior parte do oxigênio que respiramos?
+            </h2>
+            <form class="quiz_alternativas" method="POST">
+              <input
+                type="radio"
+                onclick="playTo(4), calcularPontos(this)"
+                value="alternativa_E"
+                class="alternativa1 alternativa_E"
+                value="Florestas Tropicais"
+                name="radio1"
+                id="FT"
+                role="radio"
+                aria-label="Florestas Tropicais"
+                aria-required="true"
+              />
+              <label for="FT" class="label_alternativa"
+                >Florestas Tropicais</label
+              >
+
+              <input
+                type="radio"
+                onclick="playTo(4), calcularPontos(this)"
+                value="alternativa_C"
+                class="alternativa1 alternativa_C"
+                value="Oceanos"
+                name="radio1"
+                id="Oce"
+                role="radio"
+                aria-label="Oceanos"
+                aria-required="true"
+              />
+              <label for="Oce" class="label_alternativa">Oceanos</label>
+
+              <input
+                type="radio"
+                onclick="playTo(4), calcularPontos(this)"
+                value="alternativa_E"
+                class="alternativa1 alternativa_E"
+                value="Montanhas"
+                name="radio1"
+                id="Mon"
+                role="radio"
+                aria-label="Montanhas"
+                aria-required="true"
+              />
+              <label for="Mon" class="label_alternativa">Montanhas</label>
+
+              <input
+                type="radio"
+                onclick="playTo(4), calcularPontos(this)"
+                value="alternativa_E"
+                class="alternativa1 alternativa_E"
+                value="Geleiras"
+                name="radio1"
+                id="Gele"
+                role="radio"
+                aria-label="Geleiras"
+                aria-required="true"
+              />
+              <label for="Gele" class="label_alternativa">Geleiras</label>
+            </form>
+          </div>
         </section>
 
-        <!--VIDEO PITCH-->
-        <article class="video_sobre">
-            <iframe width="80%" height="100%" style="border-radius: 40px;" src="https://www.youtube.com/embed/gldTg4ULAgU?si=q5s8zU9cKerKwKNq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <h3 class="video_sub_titulo">Junte-se a nós nesta aventura! Mergulhe no Azul e faça parte da solução para um futuro mais sustentável para os oceanos e para o planeta.</h3>
-        </article>
+        <!--QUIZ 2-->
+        <section class="antes_quiz quiz_2 ani_sai">
+          <div class="quiz">
+            <h2 class="quiz_titulo">
+              Qual é a principal ameaça aos oceanos que causa a<br />morte de
+              milhares de animais marinhos anualmente?
+            </h2>
+            <h2 class="quiz_titulo_mobile">
+              Qual é a principal ameaça aos oceanos que causa a morte de
+              milhares de animais marinhos anualmente?
+            </h2>
+            <form class="quiz_alternativas" method="POST">
+              <input
+                type="radio"
+                onclick="playTo(6), calcularPontos(this)"
+                value="alternativa_E"
+                class="alternativa2 alternativa_E"
+                value="Poluição sonora"
+                name="radio2"
+                id="PS"
+                role="radio"
+                aria-label="Poluição sonora"
+                aria-required="true"
+              />
+              <label for="PS" class="label_alternativa">Poluição sonora</label>
 
-        <!--  RODAPE  -->
-        <footer>
-            <div class="rodape_todos_links">
-                <div class="rodape_links">
-                    <div class="links">
-                        <div class="sitemap">
-                            <p class="sitemap_titu">Empresa</p>
-                            <a href="quiz.html" class="anchor2" aria-label="Ir para a página de Quiz">Quiz</a>
-                            <a href="index.html" class="anchor2" aria-label="Ir para a página Principal">Sobre</a>
-                            <a href="equipe.html" class="anchor2" aria-label="Ir para a página da Equipe">Equipe</a>
-                        </div>
-                        <div class="sitemap4">
-                            <p class="sitemap_titu">Serviços</p>
-                            <a href="doar.html" class="anchor2" aria-label="Ir para a página de Doações">Doar</a>
-                            <a href="doar.html" class="anchor2" aria-label="Ir para a página de Ao Vivo">Ao Vivo</a>
-                            <a href="equipe.html" class="anchor2" aria-label="Ir para a página de Contato">Contato</a>
-                        </div>
-                    </div>
-                    <div class="redes_sociais_rodape">
-                        <a href="" class="redes_sociais">
-                            <svg class="rede_social" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M20.95 8.30496C20.9399 7.54758 20.7981 6.79773 20.531 6.08896C20.2993 5.49111 19.9455 4.94816 19.4922 4.49479C19.0388 4.04142 18.4958 3.68761 17.898 3.45596C17.1983 3.19331 16.4592 3.0513 15.712 3.03596C14.75 2.99296 14.445 2.98096 12.003 2.98096C9.561 2.98096 9.248 2.98096 8.293 3.03596C7.54616 3.05141 6.80735 3.19343 6.108 3.45596C5.51006 3.68745 4.96702 4.0412 4.51363 4.49459C4.06024 4.94798 3.70649 5.49102 3.475 6.08896C3.21183 6.78809 3.07012 7.52707 3.056 8.27396C3.013 9.23696 3 9.54196 3 11.984C3 14.426 3 14.738 3.056 15.694C3.071 16.442 3.212 17.18 3.475 17.881C3.70688 18.4787 4.0609 19.0215 4.51444 19.4747C4.96798 19.9279 5.51106 20.2815 6.109 20.513C6.80643 20.7862 7.54537 20.9383 8.294 20.963C9.257 21.006 9.562 21.019 12.004 21.019C14.446 21.019 14.759 21.019 15.714 20.963C16.4612 20.9482 17.2004 20.8066 17.9 20.544C18.4977 20.312 19.0405 19.9581 19.4938 19.5048C19.9472 19.0515 20.3011 18.5086 20.533 17.911C20.796 17.211 20.937 16.473 20.952 15.724C20.995 14.762 21.008 14.457 21.008 12.014C21.006 9.57196 21.006 9.26196 20.95 8.30496ZM11.997 16.602C9.443 16.602 7.374 14.533 7.374 11.979C7.374 9.42496 9.443 7.35596 11.997 7.35596C13.2231 7.35596 14.399 7.84302 15.266 8.71C16.1329 9.57698 16.62 10.7529 16.62 11.979C16.62 13.2051 16.1329 14.3809 15.266 15.2479C14.399 16.1149 13.2231 16.602 11.997 16.602ZM16.804 8.26296C16.6624 8.26309 16.5222 8.2353 16.3913 8.18117C16.2605 8.12704 16.1416 8.04764 16.0414 7.94751C15.9413 7.84738 15.8619 7.72849 15.8078 7.59765C15.7537 7.4668 15.7259 7.32656 15.726 7.18496C15.726 7.04346 15.7539 6.90334 15.808 6.77262C15.8622 6.64189 15.9415 6.5231 16.0416 6.42305C16.1416 6.32299 16.2604 6.24363 16.3912 6.18948C16.5219 6.13533 16.662 6.10746 16.8035 6.10746C16.945 6.10746 17.0851 6.13533 17.2158 6.18948C17.3466 6.24363 17.4654 6.32299 17.5654 6.42305C17.6655 6.5231 17.7448 6.64189 17.799 6.77262C17.8531 6.90334 17.881 7.04346 17.881 7.18496C17.881 7.78096 17.399 8.26296 16.804 8.26296Z"/>
-                            <path d="M11.9952 14.9821C13.6537 14.9821 14.9982 13.6376 14.9982 11.9791C14.9982 10.3206 13.6537 8.97607 11.9952 8.97607C10.3367 8.97607 8.99219 10.3206 8.99219 11.9791C8.99219 13.6376 10.3367 14.9821 11.9952 14.9821Z"/>
-                        </svg>                                
-                        </a>
-                        <a href="https://www.youtube.com/@BlueGuardiansGS" class="redes_sociais">
-                            <svg class="rede_social" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21.5914 7.20301C21.4775 6.78041 21.2549 6.39501 20.9457 6.08518C20.6366 5.77534 20.2517 5.55187 19.8294 5.43701C18.2634 5.00701 11.9984 5.00001 11.9984 5.00001C11.9984 5.00001 5.73438 4.99301 4.16738 5.40401C3.7453 5.52415 3.3612 5.75078 3.05194 6.06214C2.74269 6.3735 2.51866 6.75913 2.40138 7.18201C1.98838 8.74801 1.98438 11.996 1.98438 11.996C1.98438 11.996 1.98038 15.26 2.39038 16.81C2.62038 17.667 3.29538 18.344 4.15338 18.575C5.73538 19.005 11.9834 19.012 11.9834 19.012C11.9834 19.012 18.2484 19.019 19.8144 18.609C20.2369 18.4943 20.6221 18.2714 20.932 17.9622C21.2419 17.653 21.4658 17.2682 21.5814 16.846C21.9954 15.281 21.9984 12.034 21.9984 12.034C21.9984 12.034 22.0184 8.76901 21.5914 7.20301ZM9.99438 15.005L9.99938 9.00501L15.2064 12.01L9.99438 15.005Z"/>
-                            </svg>                                                           
-                        </a>
-                        <a href="https://github.com/BlueGuardiansGS" class="redes_sociais">
-                            <svg class="rede_social" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0287 2C6.51969 2 2.05469 6.465 2.05469 11.974C2.05469 16.38 4.91169 20.119 8.87569 21.439C9.37469 21.529 9.55469 21.222 9.55469 20.958C9.55469 20.721 9.54669 20.093 9.54369 19.262C6.76869 19.864 6.18269 17.924 6.18269 17.924C5.73069 16.772 5.07569 16.465 5.07569 16.465C4.17069 15.846 5.14469 15.86 5.14469 15.86C6.14669 15.93 6.67169 16.888 6.67169 16.888C7.56169 18.412 9.00769 17.972 9.57369 17.717C9.66469 17.072 9.92469 16.632 10.2087 16.383C7.99469 16.132 5.66669 15.276 5.66669 11.453C5.66669 10.366 6.05569 9.474 6.69069 8.778C6.58969 8.525 6.24469 7.51 6.78969 6.138C6.78969 6.138 7.62669 5.869 9.53169 7.159C10.3453 6.93767 11.1845 6.8247 12.0277 6.823C12.8709 6.82437 13.7102 6.93735 14.5237 7.159C16.4297 5.868 17.2657 6.138 17.2657 6.138C17.8107 7.51 17.4687 8.525 17.3647 8.778C18.0047 9.474 18.3887 10.365 18.3887 11.453C18.3887 15.286 16.0587 16.128 13.8367 16.375C14.1917 16.683 14.5117 17.291 14.5117 18.221C14.5117 19.555 14.4997 20.631 14.4997 20.958C14.4997 21.225 14.6777 21.535 15.1867 21.437C19.1487 20.115 22.0027 16.379 22.0027 11.974C22.0027 6.465 17.5377 2 12.0287 2Z"/>
-                            </svg>                                                            
-                        </a>
-                    </div>
-                </div>
-            </div>  
-            <div class="tudo_rodape_baixo">
-                <!--LOGOS-->
-                <div class="logo_rodape">
-                    <a href="index.html" class="logo_BlueGuardians_rodape"><img src="base/img/nav/logo.png" class="logo_nav" alt="Logo do Blue Guardians - rodapé" title="Logo do Blue Guardians - rodapé"></a>
-                </div>
-                <a href="#" class="lerami" aria-label="Ir para a página da LERAMI">© 2024 LERAMI</a>
+              <input
+                type="radio"
+                onclick="playTo(6), calcularPontos(this)"
+                value="alternativa_E"
+                class="alternativa2 alternativa_E"
+                value="Mudanças climáticas"
+                name="radio2"
+                id="MC"
+                role="radio"
+                aria-label="Mudanças climáticas"
+                aria-required="true"
+              />
+              <label for="MC" class="label_alternativa"
+                >Mudanças climáticas</label
+              >
+
+              <input
+                type="radio"
+                onclick="playTo(6), calcularPontos(this)"
+                value="alternativa_C"
+                class="alternativa2 alternativa_C"
+                value="Poluição por plástico"
+                name="radio2"
+                id="PP"
+                role="radio"
+                aria-label="Poluição por plástic"
+                aria-required="true"
+              />
+              <label for="PP" class="label_alternativa"
+                >Poluição por plástico</label
+              >
+
+              <input
+                type="radio"
+                onclick="playTo(6), calcularPontos(this)"
+                value="alternativa_E"
+                class="alternativa2 alternativa_E"
+                value="Caça predatória"
+                name="radio2"
+                id="CP"
+                role="radio"
+                aria-label="Caça predatória"
+                aria-required="true"
+              />
+              <label for="CP" class="label_alternativa">Caça predatória</label>
+            </form>
+          </div>
+        </section>
+
+        <!--QUIZ 3-->
+        <section class="antes_quiz quiz_3 ani_sai">
+          <div class="quiz">
+            <h2 class="quiz_titulo">
+              Quantas pessoas no mundo dependem dos oceanos<br />como principal
+              fonte de alimento?
+            </h2>
+            <h2 class="quiz_titulo_mobile">
+              Quantas pessoas no mundo dependem dos oceanos como principal fonte
+              de alimento?
+            </h2>
+            <form class="quiz_alternativas" method="POST">
+              <input
+                type="radio"
+                onclick="playTo(8.3), calcularPontos(this)"
+                value="alternativa_E"
+                class="alternativa3 alternativa_E"
+                value="100 milhões"
+                name="radio3"
+                id="MI100"
+                role="radio"
+                aria-label="100 milhões"
+                aria-required="true"
+              />
+              <label for="MI100" class="label_alternativa">100 milhões</label>
+
+              <input
+                type="radio"
+                onclick="playTo(8.3), calcularPontos(this)"
+                value="alternativa_E"
+                class="alternativa3 alternativa_E"
+                value="500 milhões"
+                name="radio3"
+                id="MI50"
+                role="radio"
+                aria-label="500 milhões"
+                aria-required="true"
+              />
+              <label for="MI50" class="label_alternativa">500 milhões</label>
+
+              <input
+                type="radio"
+                onclick="playTo(8.3), calcularPontos(this)"
+                value="alternativa_E"
+                class="alternativa3 alternativa_E"
+                value="1 bilhão"
+                name="radio3"
+                id="M1"
+                role="radio"
+                aria-label="1 bilhão"
+                aria-required="true"
+              />
+              <label for="M1" class="label_alternativa">1 bilhão</label>
+
+              <input
+                type="radio"
+                onclick="playTo(8.3), calcularPontos(this)"
+                value="alternativa_C"
+                class="alternativa3 alternativa_C"
+                value="3 bilhões"
+                name="radio3"
+                id="BI3"
+                role="radio"
+                aria-label="3 bilhões"
+                aria-required="true"
+              />
+              <label for="BI3" class="label_alternativa">3 bilhões</label>
+            </form>
+          </div>
+        </section>
+
+        <!--QUIZ 4-->
+        <section class="antes_quiz quiz_4 ani_sai">
+          <div class="quiz">
+            <h2 class="quiz_titulo">
+              O que a ONU declarou para incentivar ações<br />urgentes para
+              proteger os oceanos?
+            </h2>
+            <h2 class="quiz_titulo_mobile">
+              O que a ONU declarou para incentivar ações urgentes para proteger
+              os oceanos?
+            </h2>
+            <form class="quiz_alternativas" method="POST">
+              <input
+                type="radio"
+                onclick="playTo(10.3), calcularPontos(this)"
+                value="alternativa_E"
+                class="alternativa4 alternativa_E"
+                value="Dia Mundial da Limpeza"
+                name="radio4"
+                id="DML"
+                role="radio"
+                aria-label="Dia Mundial da Limpeza"
+                aria-required="true"
+              />
+              <label for="DML" class="label_alternativa"
+                >Dia Mundial da Limpeza</label
+              >
+
+              <input
+                type="radio"
+                onclick="playTo(10.3), calcularPontos(this)"
+                value="alternativa_C"
+                class="alternativa4 alternativa_C"
+                value="Década dos Oceanos para o Desenvolvimento Sustentável"
+                name="radio4"
+                id="DCD"
+                role="radio"
+                aria-label="Década dos Oceanos para o Desenvolvimento Sustentável"
+                aria-required="true"
+              />
+              <label for="DCD" class="label_alternativa"
+                >Década dos Oceanos para o Desenvolvimento Sustentável</label
+              >
+
+              <input
+                type="radio"
+                onclick="playTo(10.3), calcularPontos(this)"
+                value="alternativa_E"
+                class="alternativa4 alternativa_E"
+                value="Ano Internacional dos Recifes de Coral"
+                name="radio4"
+                id="AIR"
+                role="radio"
+                aria-label="Ano Internacional dos Recifes de Coral"
+                aria-required="true"
+              />
+              <label for="AIR" class="label_alternativa"
+                >Ano Internacional dos Recifes de Coral</label
+              >
+
+              <input
+                type="radio"
+                onclick="playTo(10.3), calcularPontos(this)"
+                value="alternativa_E"
+                class="alternativa4 alternativa_E"
+                value="Semana de Conscientização Ambiental"
+                name="radio4"
+                id="SCA"
+                role="radio"
+                aria-label="Semana de Conscientização Ambiental"
+                aria-required="true"
+              />
+              <label for="SCA" class="label_alternativa"
+                >Semana de Conscientização Ambiental</label
+              >
+            </form>
+          </div>
+        </section>
+
+        <!--QUIZ 5-->
+        <section class="antes_quiz quiz_5 ani_sai">
+          <div class="quiz">
+            <h2 class="quiz_titulo">
+              Segundo estimativas da ONU, o que terá mais nos<br />oceanos em
+              2050: peixes ou plástico?
+            </h2>
+            <h2 class="quiz_titulo_mobile">
+              Segundo estimativas da ONU, o que terá mais nos oceanos em 2050:
+              peixes ou plástico?
+            </h2>
+            <form class="quiz_alternativas" method="POST">
+              <input
+                type="radio"
+                onclick="playTo(13), calcularPontos(this)"
+                value="alternativa_E"
+                class="alternativa5 alternativa_E"
+                value="Peixes"
+                name="radio5"
+                id="PEI"
+                role="radio"
+                aria-label="Peixes"
+                aria-required="true"
+              />
+              <label for="PEI" class="label_alternativa">Peixes</label>
+
+              <input
+                type="radio"
+                onclick="playTo(13), calcularPontos(this)"
+                value="alternativa_C"
+                class="alternativa5 alternativa_C"
+                value="Plástico"
+                name="radio5"
+                id="PLA"
+                role="radio"
+                aria-label="Plástico"
+                aria-required="true"
+              />
+              <label for="PLA" class="label_alternativa">Plástico</label>
+            </form>
+          </div>
+        </section>
+
+        <!--FIM-->
+        <section class="antes_quiz quiz_fim ani_sai">
+          <div class="dentro_quiz_fim">
+            <div class="item_meio_quiz_fim">
+              <div class="item_meio_quiz_fim_dentro">
+                <p class="pontuacao">0</p>
+                <p class="pontuacao_sub">Pts.</p>
+              </div>
             </div>
-        </footer>
+            <div class="quiz_fim_item1">
+              <div>
+                <p class="titu_quiz_fim_item1">
+                  Parabéns por completar a aventura!
+                </p>
+                <p class="txt_quiz_fim_item1">
+                  Agora você faz parte da comunidade de protetores dos oceanos!
+                </p>
+              </div>
+              <a href="" class="btn_quiz_fim_item1">Compartilhar</a>
+            </div>
+            <div class="quiz_fim_item2">
+              <div class="quiz_fim_item2_img"></div>
+              <p class="titu_quiz_fim_item2">
+                Conheça nossos<br />Peixes Robos!
+              </p>
+            </div>
+            <div class="quiz_fim_item3">
+              <p class="titu_quiz_fim_item3">
+                Sua doação ajuda a financiar os robôs-peixe e a manter os
+                oceanos limpos.
+              </p>
+              <a href="" class="btn_quiz_fim_item3">Doar agora</a>
+            </div>
+            <div class="quiz_fim_item4">
+              <p class="titu_quiz_fim_item4">Assista nosso Vídeo Pitch!</p>
+              <div class="video"></div>
+            </div>
+          </div>
+          <div class="dentro_quiz_fim_mobile">
+            <div class="item_meio_quiz_fim_mobile">
+              <div class="item_meio_quiz_fim_mobile2">
+                <div class="item_meio_quiz_fim_dentro_mobile">
+                  <p class="pontuacao_mobile">0</p>
+                  <p class="pontuacao_sub">Pts.</p>
+                </div>
+              </div>
+              <a href="" class="item_meio_quiz_fim_dentro2">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 18.3333C16.3807 18.3333 17.5 17.214 17.5 15.8333C17.5 14.4525 16.3807 13.3333 15 13.3333C13.6192 13.3333 12.5 14.4525 12.5 15.8333C12.5 17.214 13.6192 18.3333 15 18.3333Z"
+                    fill="white"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M15 6.66675C16.3807 6.66675 17.5 5.54746 17.5 4.16675C17.5 2.78604 16.3807 1.66675 15 1.66675C13.6192 1.66675 12.5 2.78604 12.5 4.16675C12.5 5.54746 13.6192 6.66675 15 6.66675Z"
+                    fill="white"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5 12.5C6.38071 12.5 7.5 11.3807 7.5 10C7.5 8.61925 6.38071 7.5 5 7.5C3.61929 7.5 2.5 8.61925 2.5 10C2.5 11.3807 3.61929 12.5 5 12.5Z"
+                    fill="white"
+                    stroke="white"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M12.9163 5.41675L7.08301 8.75008"
+                    stroke="white"
+                    stroke-width="1.5"
+                  />
+                  <path
+                    d="M7.08301 11.25L12.9163 14.5833"
+                    stroke="white"
+                    stroke-width="1.5"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="quiz_fim_item1_mobile">
+              <div>
+                <p class="titu_quiz_fim_item1">
+                  Parabéns por completar a aventura!
+                </p>
+                <p class="txt_quiz_fim_item1">
+                  Agora você faz parte da comunidade de protetores dos oceanos!
+                </p>
+              </div>
+            </div>
+            <div class="quiz_fim_item4_mobile">
+              <p class="titu_quiz_fim_item4">Assista nosso Vídeo Pitch!</p>
+              <div class="video"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!--  RODAPE  -->
+      <footer>
+        <div class="rodape_todos_links">
+          <div class="rodape_links">
+            <div class="links">
+              <div class="sitemap">
+                <p class="sitemap_titu">Empresa</p>
+                <a
+                  href="index.html"
+                  class="anchor2"
+                  role="link"
+                  aria-label="Ir para a página de Quiz"
+                  >Quiz</a
+                >
+                <a
+                  href="equipe.html"
+                  class="anchor2"
+                  role="link"
+                  aria-label="Ir para a página da Equipe"
+                  >Equipe</a
+                >
+                <a
+                  href="equipe.html"
+                  class="anchor2"
+                  role="link"
+                  aria-label="Ir para a página de Contato"
+                  >Contato</a
+                >
+              </div>
+              <div class="sitemap4">
+                <p class="sitemap_titu">Serviços</p>
+                <a
+                  href="doar.html"
+                  class="anchor2"
+                  role="link"
+                  aria-label="Ir para a página de Doações"
+                  >Doar</a
+                >
+                <a
+                  href="doar.html"
+                  class="anchor2"
+                  role="link"
+                  aria-label="Ir para a página de Ao Vivo"
+                  >Ao Vivo</a
+                >
+              </div>
+            </div>
+            <div class="redes_sociais_rodape">
+              <a href="" class="redes_sociais">
+                <svg
+                  class="rede_social"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.95 8.30496C20.9399 7.54758 20.7981 6.79773 20.531 6.08896C20.2993 5.49111 19.9455 4.94816 19.4922 4.49479C19.0388 4.04142 18.4958 3.68761 17.898 3.45596C17.1983 3.19331 16.4592 3.0513 15.712 3.03596C14.75 2.99296 14.445 2.98096 12.003 2.98096C9.561 2.98096 9.248 2.98096 8.293 3.03596C7.54616 3.05141 6.80735 3.19343 6.108 3.45596C5.51006 3.68745 4.96702 4.0412 4.51363 4.49459C4.06024 4.94798 3.70649 5.49102 3.475 6.08896C3.21183 6.78809 3.07012 7.52707 3.056 8.27396C3.013 9.23696 3 9.54196 3 11.984C3 14.426 3 14.738 3.056 15.694C3.071 16.442 3.212 17.18 3.475 17.881C3.70688 18.4787 4.0609 19.0215 4.51444 19.4747C4.96798 19.9279 5.51106 20.2815 6.109 20.513C6.80643 20.7862 7.54537 20.9383 8.294 20.963C9.257 21.006 9.562 21.019 12.004 21.019C14.446 21.019 14.759 21.019 15.714 20.963C16.4612 20.9482 17.2004 20.8066 17.9 20.544C18.4977 20.312 19.0405 19.9581 19.4938 19.5048C19.9472 19.0515 20.3011 18.5086 20.533 17.911C20.796 17.211 20.937 16.473 20.952 15.724C20.995 14.762 21.008 14.457 21.008 12.014C21.006 9.57196 21.006 9.26196 20.95 8.30496ZM11.997 16.602C9.443 16.602 7.374 14.533 7.374 11.979C7.374 9.42496 9.443 7.35596 11.997 7.35596C13.2231 7.35596 14.399 7.84302 15.266 8.71C16.1329 9.57698 16.62 10.7529 16.62 11.979C16.62 13.2051 16.1329 14.3809 15.266 15.2479C14.399 16.1149 13.2231 16.602 11.997 16.602ZM16.804 8.26296C16.6624 8.26309 16.5222 8.2353 16.3913 8.18117C16.2605 8.12704 16.1416 8.04764 16.0414 7.94751C15.9413 7.84738 15.8619 7.72849 15.8078 7.59765C15.7537 7.4668 15.7259 7.32656 15.726 7.18496C15.726 7.04346 15.7539 6.90334 15.808 6.77262C15.8622 6.64189 15.9415 6.5231 16.0416 6.42305C16.1416 6.32299 16.2604 6.24363 16.3912 6.18948C16.5219 6.13533 16.662 6.10746 16.8035 6.10746C16.945 6.10746 17.0851 6.13533 17.2158 6.18948C17.3466 6.24363 17.4654 6.32299 17.5654 6.42305C17.6655 6.5231 17.7448 6.64189 17.799 6.77262C17.8531 6.90334 17.881 7.04346 17.881 7.18496C17.881 7.78096 17.399 8.26296 16.804 8.26296Z"
+                  />
+                  <path
+                    d="M11.9952 14.9821C13.6537 14.9821 14.9982 13.6376 14.9982 11.9791C14.9982 10.3206 13.6537 8.97607 11.9952 8.97607C10.3367 8.97607 8.99219 10.3206 8.99219 11.9791C8.99219 13.6376 10.3367 14.9821 11.9952 14.9821Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://youtu.be/ZoeoYKEFKxc?si=5JMdihVcnd5PidSc"
+                class="redes_sociais"
+              >
+                <svg
+                  class="rede_social"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M21.5914 7.20301C21.4775 6.78041 21.2549 6.39501 20.9457 6.08518C20.6366 5.77534 20.2517 5.55187 19.8294 5.43701C18.2634 5.00701 11.9984 5.00001 11.9984 5.00001C11.9984 5.00001 5.73438 4.99301 4.16738 5.40401C3.7453 5.52415 3.3612 5.75078 3.05194 6.06214C2.74269 6.3735 2.51866 6.75913 2.40138 7.18201C1.98838 8.74801 1.98438 11.996 1.98438 11.996C1.98438 11.996 1.98038 15.26 2.39038 16.81C2.62038 17.667 3.29538 18.344 4.15338 18.575C5.73538 19.005 11.9834 19.012 11.9834 19.012C11.9834 19.012 18.2484 19.019 19.8144 18.609C20.2369 18.4943 20.6221 18.2714 20.932 17.9622C21.2419 17.653 21.4658 17.2682 21.5814 16.846C21.9954 15.281 21.9984 12.034 21.9984 12.034C21.9984 12.034 22.0184 8.76901 21.5914 7.20301ZM9.99438 15.005L9.99938 9.00501L15.2064 12.01L9.99438 15.005Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://github.com/VaptVupt2024/Vapt-Vupt-Challenge"
+                class="redes_sociais"
+              >
+                <svg
+                  class="rede_social"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12.0287 2C6.51969 2 2.05469 6.465 2.05469 11.974C2.05469 16.38 4.91169 20.119 8.87569 21.439C9.37469 21.529 9.55469 21.222 9.55469 20.958C9.55469 20.721 9.54669 20.093 9.54369 19.262C6.76869 19.864 6.18269 17.924 6.18269 17.924C5.73069 16.772 5.07569 16.465 5.07569 16.465C4.17069 15.846 5.14469 15.86 5.14469 15.86C6.14669 15.93 6.67169 16.888 6.67169 16.888C7.56169 18.412 9.00769 17.972 9.57369 17.717C9.66469 17.072 9.92469 16.632 10.2087 16.383C7.99469 16.132 5.66669 15.276 5.66669 11.453C5.66669 10.366 6.05569 9.474 6.69069 8.778C6.58969 8.525 6.24469 7.51 6.78969 6.138C6.78969 6.138 7.62669 5.869 9.53169 7.159C10.3453 6.93767 11.1845 6.8247 12.0277 6.823C12.8709 6.82437 13.7102 6.93735 14.5237 7.159C16.4297 5.868 17.2657 6.138 17.2657 6.138C17.8107 7.51 17.4687 8.525 17.3647 8.778C18.0047 9.474 18.3887 10.365 18.3887 11.453C18.3887 15.286 16.0587 16.128 13.8367 16.375C14.1917 16.683 14.5117 17.291 14.5117 18.221C14.5117 19.555 14.4997 20.631 14.4997 20.958C14.4997 21.225 14.6777 21.535 15.1867 21.437C19.1487 20.115 22.0027 16.379 22.0027 11.974C22.0027 6.465 17.5377 2 12.0287 2Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="tudo_rodape_baixo">
+          <!--LOGOS-->
+          <div class="logo_rodape">
+            <a href="" class="logo_coast_rodape"
+              ><img
+                src="base/img/nav/logo.png"
+                class="logo_nav"
+                alt="Logo do COAST - rodapé"
+                title="Logo do COAST - rodapé"
+                role="link"
+                aria-label="Ir para o começo da página"
+            /></a>
+          </div>
+          <a
+            href=""
+            class="lerami"
+            role="link"
+            aria-label="Ir para a página da LERAMI"
+            >© 2024 LERAMI</a
+          >
+        </div>
+      </footer>
     </main>
 
     <script src="base/js/menu_links.js"></script>
-</body>
+    <script src="index/js/troca_quiz.js"></script>
+    <script src="index/js/controla_video.js"></script>
+    <script src="index/js/calcula_pts.js"></script>
+  </body>
 </html>
