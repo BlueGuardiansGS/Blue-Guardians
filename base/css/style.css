@@ -33,6 +33,15 @@ body{
     background-color: #fff;
   }
 
+  /* -------------LIBRAS---------------- */
+  div[vw].enabled{
+    top: auto !important;
+    bottom: 1vh !important;
+    transform: translateX(calc(0% - 1vh)) !important;
+  }
+  
+
+
 
 
 /* ================================================================ */
@@ -204,7 +213,7 @@ nav{
     display: none;
   }
   .nav_menu_btn{
-    background-color: transparent;
+    background-color: transparent !important;
     padding: 0.5em;
   }
   .menu_icone{
@@ -290,6 +299,9 @@ nav{
 }
 .ani_menu_link:nth-child(5){
   animation: slide-in-bck-center 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.2s both;
+}
+.ani_menu_link:nth-child(6){
+  animation: slide-in-bck-center 1s cubic-bezier(0.230, 1.000, 0.320, 1.000) 1.3s both;
 }
 @keyframes slide-in-bck-center {
   0% {
@@ -441,7 +453,7 @@ footer{
   justify-content: center;
   gap: 2vh;
 }
-.logo_coast_rodape{
+.logo_BlueGuardians_rodape{
   height: 100%;
   display: flex;
   align-items: center;
@@ -478,7 +490,7 @@ footer{
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.10);
   border-radius: 100%;
   transition: 0.2s;
 }
